@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ListWordModule } from './listword/listword.module';
+/*import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -89,8 +95,8 @@ import { TreeTableModule } from 'primeng/treetable';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { BlockViewer } from './components/blockviewer/blockviewer.component';
  
-import { AppCodeModule } from './components/app-code/app.code.component';
-import { AppComponent } from './app.component';
+import { AppCodeModule } from './components/app-code/app.code.component';*/
+/*
 import { AppMainComponent } from './app.main.component';
 import { AppTopBarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
@@ -139,11 +145,10 @@ import { ConfigService } from './service/app.config.service';
 import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { AccessComponent } from './components/access/access.component';
+import { AccessComponent } from './components/access/access.component';*/
 
-@NgModule({
-    imports: [
-        BrowserModule,
+/*
+BrowserModule,
         FormsModule,
         AppRoutingModule,
         HttpClientModule,
@@ -229,10 +234,9 @@ import { AccessComponent } from './components/access/access.component';
         TreeTableModule,
         VirtualScrollerModule,
         AppCodeModule,
-        StyleClassModule,
-    ],
-    declarations: [
-        AppComponent,
+        StyleClassModule, */
+//# Region Components
+        /**AppComponent,
         AppMainComponent,
         AppTopBarComponent,
         AppFooterComponent,
@@ -272,12 +276,30 @@ import { AccessComponent } from './components/access/access.component';
         LoginComponent,
         ErrorComponent,
         NotfoundComponent,
-        AccessComponent,
-    ],
-    providers: [
-        {provide: LocationStrategy, useClass: HashLocationStrategy},
+        AccessComponent, */
+//#End Region
+
+//#Region Provides
+/*
+{provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
         PhotoService, ProductService, MenuService, ConfigService
+         */
+
+//#End Region
+@NgModule({
+    imports: [ 
+        RouterModule,
+        BrowserModule,
+        AppRoutingModule,
+
+    ],
+    declarations: [
+        AppComponent,
+        HomeComponent
+    ],
+    providers: [
+        
     ],
     bootstrap: [AppComponent]
 })

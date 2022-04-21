@@ -2,10 +2,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { MenubarModule } from "primeng/menubar";
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ListWordModule } from './listword/listword.module';
+import { HeadComponent } from "./app-header/app-header.component";
+
 /*import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -293,11 +296,13 @@ BrowserModule,
         RouterModule,
         BrowserModule,
         AppRoutingModule,
-        ListWordModule
+        ListWordModule,
+        MenubarModule,
     ],
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        HeadComponent,
     ],
     providers: [
         

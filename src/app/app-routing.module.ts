@@ -32,7 +32,7 @@ import { AccessComponent } from './components/access/access.component';*/
 const routes:Routes=[
     { path:"",
       component:HomeComponent},
-      {path:"",
+      {path:"list",
       loadChildren:()=>import('./listword/listword.module').then(mod=>mod.ListWordModule)}
     ]
     /**/

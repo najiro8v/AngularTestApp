@@ -1,5 +1,6 @@
 
 import { NgModule } from '@angular/core';
+import {PanelModule} from 'primeng/panel'
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MenubarModule } from "primeng/menubar";
@@ -8,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ListWordModule } from './listword/listword.module';
 import { HeadComponent } from "./app-header/app-header.component";
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 /*import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -293,11 +294,13 @@ BrowserModule,
 //#End Region
 @NgModule({
     imports: [ 
+        PanelModule,
         RouterModule,
         BrowserModule,
-        AppRoutingModule,
-        ListWordModule,
         MenubarModule,
+        ListWordModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
     ],
     declarations: [
         AppComponent,
